@@ -346,96 +346,76 @@ function Edit(_ref) {
     id: "controlsp"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("legend", {
     className: "blocks-base-control__label"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Currency', 'price')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl // Element Tag for Gutenberg standard colour selector
-  , {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Currency', 'gs-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
     value: attributes.currency,
-    onChange: onChangePriceCurrency // onChange event callback
-    ,
+    onChange: onChangePriceCurrency,
     style: {
       maxWidth: '100px'
     }
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("legend", {
     className: "blocks-base-control__label"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Original Price', 'price')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl // Element Tag for Gutenberg standard colour selector
-  , {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Original Price', 'gs-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
     value: attributes.original_price,
-    onChange: onChangeOriginalPrice // onChange event callback
-    ,
+    onChange: onChangeOriginalPrice,
     style: {
       maxWidth: '100px'
     }
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("legend", {
     className: "blocks-base-control__label"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Integer Part', 'price')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl // Element Tag for Gutenberg standard colour selector
-  , {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Integer Part', 'gs-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
     value: attributes.integer_part,
-    onChange: onChangeIntegerPart // onChange event callback
-    ,
+    onChange: onChangeIntegerPart,
     style: {
       maxWidth: '100px'
     }
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("legend", {
     className: "blocks-base-control__label"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Fractional Part', 'price')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl // Element Tag for Gutenberg standard colour selector
-  , {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Fractional Part', 'gs-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
     value: attributes.fractional_part,
-    onChange: onChangeFractionalPart // onChange event callback
-    ,
+    onChange: onChangeFractionalPart,
     style: {
       maxWidth: '100px'
     }
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("legend", {
     className: "blocks-base-control__label"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Period', 'price')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl // Element Tag for Gutenberg standard colour selector
-  , {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Period', 'gs-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
     value: attributes.period,
-    onChange: onChangePeriod // onChange event callback
-    ,
+    onChange: onChangePeriod,
     style: {
       maxWidth: '100px'
     }
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("legend", {
     className: "blocks-base-control__label"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Notice', 'price')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl // Element Tag for Gutenberg standard colour selector
-  , {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Notice', 'gs-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
     value: attributes.notice,
-    onChange: onChangeNotice // onChange event callback
-    ,
+    onChange: onChangeNotice,
     style: {
       maxWidth: '200px'
     }
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("legend", {
     className: "blocks-base-control__label"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Background Color:', 'gs-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.ColorPalette // Element Tag for Gutenberg standard colour selector
-  , {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Background Color:', 'gs-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.ColorPalette, {
     colors: colors,
     value: attributes.background_color,
-    onChange: onChangeBackgroundColor // onChange event callback
-
+    onChange: onChangeBackgroundColor
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("legend", {
     className: "blocks-base-control__label"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Highlight Color:', 'gs-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.ColorPalette // Element Tag for Gutenberg standard colour selector
-  , {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Highlight Color:', 'gs-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.ColorPalette, {
     colors: colors,
     value: attributes.highlight_color,
-    onChange: onChangeHighlightColor // onChange event callback
-
+    onChange: onChangeHighlightColor
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("legend", {
     className: "blocks-base-control__label"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Primary Color', 'gs-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.ColorPalette // Element Tag for Gutenberg standard colour selector
-  , {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Primary Color', 'gs-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.ColorPalette, {
     colors: colors,
     value: attributes.primary_color,
-    onChange: onChangePrimaryColor // onChange event callback
-
+    onChange: onChangePrimaryColor
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("legend", {
     className: "blocks-base-control__label"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Secondary Color', 'gs-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.ColorPalette // Element Tag for Gutenberg standard colour selector
-  , {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Secondary Color', 'gs-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.ColorPalette, {
     colors: colors,
     value: attributes.secondary_color,
-    onChange: onChangeSecondaryColor // onChange event callback
-
+    onChange: onChangeSecondaryColor
   }))))));
 }
 
@@ -660,7 +640,7 @@ function _extends() {
   \******************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"gs-blocks/price","version":"0.1.0","title":"Price","category":"gs-blocks","icon":"money-alt","description":"Stylized price block.","attributes":{"currency":{"type":"string","default":"$"},"original_price":{"type":"number","default":"14,90"},"integer_part":{"type":"number","default":"9"},"fractional_part":{"type":"number","default":"90"},"period":{"type":"string","default":"month"},"notice":{"type":"string","default":"billed annually"},"background_color":{"type":"string","default":"#f8f8f8"},"highlight_color":{"type":"string","default":"#ce362b"},"primary_color":{"type":"string","default":"#555"},"secondary_color":{"type":"string","default":"#000"}},"supports":{"html":false},"textdomain":"price","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"gs-blocks/price","version":"0.1.0","title":"Price","category":"gs-blocks","icon":"money-alt","description":"Stylized price block.","attributes":{"currency":{"type":"string","default":"$"},"original_price":{"type":"number","default":"14,90"},"integer_part":{"type":"number","default":"9"},"fractional_part":{"type":"number","default":"90"},"period":{"type":"string","default":"month"},"notice":{"type":"string","default":"billed annually"},"background_color":{"type":"string","default":"#f8f8f8"},"highlight_color":{"type":"string","default":"#ce362b"},"primary_color":{"type":"string","default":"#555"},"secondary_color":{"type":"string","default":"#000"}},"supports":{"html":false},"textdomain":"gs-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

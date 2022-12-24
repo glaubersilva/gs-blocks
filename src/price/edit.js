@@ -123,11 +123,11 @@ export default function Edit( { attributes, isSelected, setAttributes } ) {
 					<div id="controlsp">
 						<fieldset>
 							<legend className="blocks-base-control__label">
-								{__('Currency', 'price')}
+								{__('Currency', 'gs-blocks')}
 							</legend>
-							<TextControl // Element Tag for Gutenberg standard colour selector
+							<TextControl
 								value={attributes.currency}
-								onChange={onChangePriceCurrency} // onChange event callback
+								onChange={onChangePriceCurrency}
 								style={{
 									maxWidth: '100px',
 								}}
@@ -135,11 +135,11 @@ export default function Edit( { attributes, isSelected, setAttributes } ) {
 						</fieldset>
 						<fieldset>
 							<legend className="blocks-base-control__label">
-								{__('Original Price', 'price')}
+								{__('Original Price', 'gs-blocks')}
 							</legend>
-							<TextControl // Element Tag for Gutenberg standard colour selector
+							<TextControl
 								value={attributes.original_price}
-								onChange={onChangeOriginalPrice} // onChange event callback
+								onChange={onChangeOriginalPrice}
 								style={{
 									maxWidth: '100px',
 								}}
@@ -147,11 +147,11 @@ export default function Edit( { attributes, isSelected, setAttributes } ) {
 						</fieldset>
 						<fieldset>
 							<legend className="blocks-base-control__label">
-								{__('Integer Part', 'price')}
+								{__('Integer Part', 'gs-blocks')}
 							</legend>
-							<TextControl // Element Tag for Gutenberg standard colour selector
+							<TextControl
 								value={attributes.integer_part}
-								onChange={onChangeIntegerPart} // onChange event callback
+								onChange={onChangeIntegerPart}
 								style={{
 									maxWidth: '100px',
 								}}
@@ -159,11 +159,11 @@ export default function Edit( { attributes, isSelected, setAttributes } ) {
 						</fieldset>
 						<fieldset>
 							<legend className="blocks-base-control__label">
-								{__('Fractional Part', 'price')}
+								{__('Fractional Part', 'gs-blocks')}
 							</legend>
-							<TextControl // Element Tag for Gutenberg standard colour selector
+							<TextControl
 								value={attributes.fractional_part}
-								onChange={onChangeFractionalPart} // onChange event callback
+								onChange={onChangeFractionalPart}
 								style={{
 									maxWidth: '100px',
 								}}
@@ -171,11 +171,11 @@ export default function Edit( { attributes, isSelected, setAttributes } ) {
 						</fieldset>
 						<fieldset>
 							<legend className="blocks-base-control__label">
-								{__('Period', 'price')}
+								{__('Period', 'gs-blocks')}
 							</legend>
-							<TextControl // Element Tag for Gutenberg standard colour selector
+							<TextControl
 								value={attributes.period}
-								onChange={onChangePeriod} // onChange event callback
+								onChange={onChangePeriod}
 								style={{
 									maxWidth: '100px',
 								}}
@@ -183,11 +183,11 @@ export default function Edit( { attributes, isSelected, setAttributes } ) {
 						</fieldset>
 						<fieldset>
 							<legend className="blocks-base-control__label">
-								{__('Notice', 'price')}
+								{__('Notice', 'gs-blocks')}
 							</legend>
-							<TextControl // Element Tag for Gutenberg standard colour selector
+							<TextControl
 								value={attributes.notice}
-								onChange={onChangeNotice} // onChange event callback
+								onChange={onChangeNotice}
 								style={{
 									maxWidth: '200px',
 								}}
@@ -197,40 +197,40 @@ export default function Edit( { attributes, isSelected, setAttributes } ) {
 							<legend className="blocks-base-control__label">
 								{__('Background Color:', 'gs-blocks')}
 							</legend>
-							<ColorPalette // Element Tag for Gutenberg standard colour selector
+							<ColorPalette
 								colors={ colors }
 								value={attributes.background_color}
-								onChange={onChangeBackgroundColor} // onChange event callback
+								onChange={onChangeBackgroundColor}
 							/>
 						</fieldset>
 						<fieldset>
 							<legend className="blocks-base-control__label">
 								{__('Highlight Color:', 'gs-blocks')}
 							</legend>
-							<ColorPalette // Element Tag for Gutenberg standard colour selector
+							<ColorPalette
 								colors={ colors }
 								value={attributes.highlight_color}
-								onChange={onChangeHighlightColor} // onChange event callback
+								onChange={onChangeHighlightColor}
 							/>
 						</fieldset>
 						<fieldset>
 							<legend className="blocks-base-control__label">
 								{__('Primary Color', 'gs-blocks')}
 							</legend>
-							<ColorPalette // Element Tag for Gutenberg standard colour selector
+							<ColorPalette
 								colors={ colors }
 								value={attributes.primary_color}
-								onChange={onChangePrimaryColor} // onChange event callback
+								onChange={onChangePrimaryColor}
 							/>
 						</fieldset>
 						<fieldset>
 							<legend className="blocks-base-control__label">
 								{__('Secondary Color', 'gs-blocks')}
 							</legend>
-							<ColorPalette // Element Tag for Gutenberg standard colour selector
+							<ColorPalette
 								colors={ colors }
 								value={attributes.secondary_color}
-								onChange={onChangeSecondaryColor} // onChange event callback
+								onChange={onChangeSecondaryColor}
 							/>
 						</fieldset>
 					</div>
