@@ -35,7 +35,7 @@
 		"background_color": { "type": "string", "default": "#f8f8f8" },
 		"highlight_color": { "type": "string", "default": "#ce362b" },
 		"primary_color": { "type": "string", "default": "#555" },
-		"secondary_color": { "type": "string", "default": "black" }
+		"secondary_color": { "type": "string", "default": "#000" }
 	},	
 	"supports": {
 		"html": false

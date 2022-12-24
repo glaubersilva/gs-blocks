@@ -49,9 +49,9 @@ export default function Edit( { attributes, isSelected, setAttributes } ) {
 	const colors = [
 		{ name: 'Light Grey', color: '#f8f8f8' },
 		{ name: 'Red', color: '#ce362b' },
-		{ name: 'Dark Grey', color: '#555' },
-		{ name: 'Black', color: 'black' },
-		{ name: 'White', color: 'white' },
+		{ name: 'Dark Grey', color: '#555555' },
+		{ name: 'Black', color: '#000000' },
+		{ name: 'White', color: '#FFFFFF' },
 	];
 
 	return (

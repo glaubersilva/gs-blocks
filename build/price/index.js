@@ -101,13 +101,13 @@ function Edit(_ref) {
     color: '#ce362b'
   }, {
     name: 'Dark Grey',
-    color: '#555'
+    color: '#555555'
   }, {
     name: 'Black',
-    color: 'black'
+    color: '#000000'
   }, {
     name: 'White',
-    color: 'white'
+    color: '#FFFFFF'
   }];
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "gs-blocks-price",
@@ -456,7 +456,7 @@ function _extends() {
   \******************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"gs-blocks/price","version":"0.1.0","title":"Price","category":"gs-blocks","icon":"money-alt","description":"Stylized price block.","attributes":{"currency":{"type":"string","default":"$"},"original_price":{"type":"number","default":"14,90"},"integer_part":{"type":"number","default":"9"},"fractional_part":{"type":"number","default":"90"},"period":{"type":"string","default":"month"},"notice":{"type":"string","default":"billed annually"},"background_color":{"type":"string","default":"#f8f8f8"},"highlight_color":{"type":"string","default":"#ce362b"},"primary_color":{"type":"string","default":"#555"},"secondary_color":{"type":"string","default":"black"}},"supports":{"html":false},"textdomain":"price","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"gs-blocks/price","version":"0.1.0","title":"Price","category":"gs-blocks","icon":"money-alt","description":"Stylized price block.","attributes":{"currency":{"type":"string","default":"$"},"original_price":{"type":"number","default":"14,90"},"integer_part":{"type":"number","default":"9"},"fractional_part":{"type":"number","default":"90"},"period":{"type":"string","default":"month"},"notice":{"type":"string","default":"billed annually"},"background_color":{"type":"string","default":"#f8f8f8"},"highlight_color":{"type":"string","default":"#ce362b"},"primary_color":{"type":"string","default":"#555"},"secondary_color":{"type":"string","default":"#000"}},"supports":{"html":false},"textdomain":"price","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

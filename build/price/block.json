@@ -46,7 +46,7 @@
     },
     "secondary_color": {
       "type": "string",
-      "default": "black"
+      "default": "#000"
     }
   },
   "supports": {
