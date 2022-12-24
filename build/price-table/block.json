@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "gs-blocks/price-table",
+  "version": "0.1.0",
+  "title": "Price Table",
+  "category": "gs-blocks",
+  "icon": "menu-alt2",
+  "description": "A simple price table block.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "price-table",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

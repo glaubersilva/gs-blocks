@@ -1,0 +1,85 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.gs-blocks-price {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	color: #555;
+	font-weight: 800;
+	font-size: 65px;
+	padding: 30px 0;
+	transition: all .3s ease;
+
+	.gs-blocks-price-original-price {
+		margin-right: 15px;
+		text-decoration: line-through;
+		color: #ce362b;
+		font-family: "Oswald",Sans-serif;
+		align-self: flex-start;
+	}
+
+	.gs-blocks-price-typo-excluded {
+		line-height: initial;
+		letter-spacing: initial;
+		text-transform: initial;
+		font-weight: initial;
+		font-size: initial;
+		font-style: initial;
+	}
+
+	.gs-blocks-price-currency {
+		line-height: 1;
+		margin-right: 3px;
+		font-size: calc(20em/100);
+		align-self: flex-start;
+	}
+
+	.gs-blocks-price-integer-part {
+		line-height: 0.8;
+	}
+
+	.gs-blocks-price-after-integer-part {
+		display: flex;
+		flex-wrap: wrap;
+		text-align: left;
+		align-self: stretch;
+		align-items: flex-start;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.gs-blocks-price-fractional-part {
+		line-height: 1;
+		font-size: calc(20em/100);
+	}
+
+	.gs-blocks-price-period {    
+		transition: color .3s ease;
+		font-family: "Open Sans",Sans-serif;
+	}
+
+	.gs-blocks-price-period-position-beside {
+		margin-left: 10px;
+	}
+
+	.gs-blocks-price-notice {
+		margin-left: 4px;
+		font-size:12px;
+		color:black;
+		font-weight:bold;
+		font-style: italic;
+	}
+
+	.gs-blocks-price-asterisk {
+		color: #ce362b;
+		font-size:13px;
+	}
+}
+
