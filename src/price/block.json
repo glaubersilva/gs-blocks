@@ -7,6 +7,36 @@
 	"category": "gs-blocks",
 	"icon": "money-alt",
 	"description": "Stylized price block.",
+	"attributes": {
+		"currency": {
+			"type": "string",
+			"default": "$"
+		},
+		"original_price": {
+			"type": "number",
+			"default": "14,90"
+		},
+		"integer_part": {
+			"type": "number",
+			"default": "9"
+		},
+		"fractional_part": {
+			"type": "number",
+			"default": "90"
+		},
+		"period": {
+			"type": "string",
+			"default": "month"
+		},
+		"notice": {
+			"type": "string",
+			"default": "billed annually"
+		},		
+		"background_color": { "type": "string", "default": "#f8f8f8" },
+		"highlight_color": { "type": "string", "default": "#ce362b" },
+		"primary_color": { "type": "string", "default": "#555" },
+		"secondary_color": { "type": "string", "default": "black" }
+	},	
 	"supports": {
 		"html": false
 	},
