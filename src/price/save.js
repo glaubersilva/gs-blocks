@@ -1,12 +1,12 @@
 import { useBlockProps } from '@wordpress/block-editor';
 
-import Price from './price';
+import Markup from './markup';
 
-export default function save( { attributes } ) {
+export default function save({ attributes }) {
 	const blockProps = useBlockProps.save();
 	return (
 		<div {...blockProps}>
-			<Price attributes={attributes} />
+			<Markup {...{ attributes }} />
 		</div>
 	);
 }

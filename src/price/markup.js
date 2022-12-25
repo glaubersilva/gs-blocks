@@ -1,4 +1,4 @@
-export default function price({attributes}) {
+export default function markup({ attributes }) {
 	return (
 		<div
 			className="gs-blocks-price"
