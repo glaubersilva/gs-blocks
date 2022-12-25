@@ -1,0 +1,79 @@
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/price/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.gs-blocks-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  color: #555;
+  font-weight: 800;
+  font-size: 65px;
+  padding: 30px 0;
+  transition: all 0.3s ease;
+}
+.gs-blocks-price .gs-blocks-price-original-price,
+.gs-blocks-price .gs-blocks-price-original-price input[type=text] {
+  margin-right: 15px;
+  text-decoration: line-through;
+  color: #ce362b;
+  font-family: Oswald, sans-serif;
+  align-self: flex-start;
+}
+.gs-blocks-price .gs-blocks-price-typo-excluded {
+  line-height: initial;
+  letter-spacing: initial;
+  text-transform: initial;
+  font-weight: initial;
+  font-size: initial;
+  font-style: initial;
+}
+.gs-blocks-price .gs-blocks-price-currency {
+  line-height: 1;
+  margin-right: 3px;
+  font-size: 0.2em;
+  align-self: flex-start;
+}
+.gs-blocks-price .gs-blocks-price-integer-part {
+  line-height: 0.8;
+}
+.gs-blocks-price .gs-blocks-price-after-integer-part {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  -ms-grid-row-align: stretch;
+      align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.gs-blocks-price .gs-blocks-price-fractional-part {
+  line-height: 1;
+  font-size: 0.2em;
+}
+.gs-blocks-price .gs-blocks-price-period {
+  transition: color 0.3s ease;
+  font-family: "Open Sans", sans-serif;
+}
+.gs-blocks-price .gs-blocks-price-period-position-beside {
+  margin-left: 10px;
+}
+.gs-blocks-price .gs-blocks-price-notice {
+  font-size: 12px;
+  color: #000;
+  font-weight: 700;
+  font-style: italic;
+}
+.gs-blocks-price .gs-blocks-price-asterisk {
+  color: #ce362b;
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
