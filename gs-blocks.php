@@ -29,8 +29,8 @@ function gs_blocks_init() {
 	//register_block_type( __DIR__ . '/build/sidebar' );
 	//register_block_type( __DIR__ . '/build/supports' );
 	register_block_type( __DIR__ . '/build/price' );
-	//register_block_type( __DIR__ . '/build/price-table' );
-	//register_block_type( __DIR__ . '/build/container-flex' );
+	register_block_type( __DIR__ . '/build/price-table' );
+	register_block_type( __DIR__ . '/build/container-flex' );
 }
 add_action( 'init', 'gs_blocks_init' );
 

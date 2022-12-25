@@ -46,9 +46,9 @@ export default function Settings({ attributes, setAttributes }) {
 	const colors = [
 		{ name: 'Light Grey', color: '#f8f8f8' },
 		{ name: 'Red', color: '#ce362b' },
-		{ name: 'Dark Grey', color: '#555555' },
-		{ name: 'Black', color: '#000000' },
-		{ name: 'White', color: '#FFFFFF' },
+		{ name: 'Dark Grey', color: '#555' },
+		{ name: 'Black', color: '#000' },
+		{ name: 'White', color: '#FFF' },
 	];
 
 	return (

@@ -293,13 +293,13 @@ function Settings(_ref) {
     color: '#ce362b'
   }, {
     name: 'Dark Grey',
-    color: '#555555'
+    color: '#555'
   }, {
     name: 'Black',
-    color: '#000000'
+    color: '#000'
   }, {
     name: 'White',
-    color: '#FFFFFF'
+    color: '#FFF'
   }];
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "gs-blocks-price-settings"
