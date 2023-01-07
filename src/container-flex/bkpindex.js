@@ -1,11 +1,6 @@
 import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
-import { TextControl, Button } from '@wordpress/components';
-
-//import './style.scss';
-import './editor.scss';
-
-import { price } from '../price/index';
+import { TextControl } from '@wordpress/components';
 
 import {
 	useBlockProps,
@@ -19,7 +14,7 @@ import {
 	InspectorControls,
 } from '@wordpress/block-editor';
 
-registerBlockType('gs-blocks/price-table', {
+registerBlockType('gs-blocks/container-flex', {
 	supports: {
 		color: {
 			text: true,
@@ -28,19 +23,19 @@ registerBlockType('gs-blocks/price-table', {
 		},
 	},
 	attributes: {
-		//align: { type: 'string', default: 'center' }, // none, left, center, right
-		//vertical_align: { type: 'string', default: 'center' }, //// top, center, bottom
+		align: { type: 'string', default: 'center' }, // none, left, center, right
+		vertical_align: { type: 'string', default: 'center' }, //// top, center, bottom
 		header: {
 			type: 'string',
 			source: 'text',
 			selector: 'div',
 			default: 'Product Name', // empty default
 		},
-		header_bg_color: { type: 'string', default: '#222222' },
+		header_bg_color: { type: 'string', default: '#000000' },
 		header_text_color: { type: 'string', default: '#ffffff' },
 	},
 	edit: ({ attributes, setAttributes }) => {
-		/*const onChangeAlign = (newAlignment) => {
+		const onChangeAlign = (newAlignment) => {
 			switch (newAlignment) {
 				case 'left':
 					newAlignment = 'flex-start';
@@ -69,7 +64,7 @@ registerBlockType('gs-blocks/price-table', {
 				vertical_align:
 					newAlignment === undefined ? 'none' : newAlignment,
 			});
-		};*/
+		};
 
 		const onChangeHeaderBGColor = (hexColor) => {
 			setAttributes({ header_bg_color: hexColor });
@@ -79,27 +74,20 @@ registerBlockType('gs-blocks/price-table', {
 			setAttributes({ header_text_color: hexColor });
 		};
 
-		const ALLOWED_BLOCKS = ['gs-blocks/price'];
-
-		const TEMPLATE = [
-			['gs-blocks/price', { currency: '€' }],
-			//[ 'core/paragraph', { placeholder: 'Image Details' } ],
-		];
-
 		return (
 			<div
 				{...useBlockProps()}
 				style={{
-					backgroundColor: '#f8f8f8',
-					minHeight: '550px',
+					backgroundColor: 'red',
+					minHeight: '450px',
 					//overflow: 'auto',
 					display: 'flex',
 					flexDirection: 'column',
-					alignItems: 'center', //attributes.align,
-					justifyContent: 'space-between', //attributes.vertical_align,
+					alignItems: attributes.align,
+					justifyContent: attributes.vertical_align,
 				}}
 			>
-				{/*<BlockControls>
+				<BlockControls>
 					<BlockAlignmentToolbar
 						value={attributes.align}
 						onChange={onChangeAlign}
@@ -108,23 +96,32 @@ registerBlockType('gs-blocks/price-table', {
 						value={attributes.vertical_align}
 						onChange={onChangeVerticalAlign}
 					/>
-				</BlockControls>*/}
+				</BlockControls>
 
-				<div
-					{...useBlockProps()}
-					className="header"
-					style={{
-						//backgroundColor: attributes.header_bg_color,
-						//color: attributes.header_text_color,
-						width: '100%',
-						minHeight: '100px',
-					}}
-				>
+				{
+					<div
+						{...useBlockProps()}
+						className="items"
+						style={{
+							backgroundColor: 'blue',
+							//marginBottom: 'auto',
+							//flex: '1',
+							//top: '0',
+							//justifySelf: 'space-between',
+							//width: '100%',
+							//height: '100px',
+						}}
+					>
+						<p>{'TOP'}</p>
+					</div>
+				}
+
+				<div {...useBlockProps()} className="header">
 					<InspectorControls key="setting">
-						<div id="price-table-controls">
+						<div id="container-flex-controls">
 							<fieldset>
 								<legend className="blocks-base-control__label">
-									{__('Background color', 'price-table')}
+									{__('Background color', 'container-flex')}
 								</legend>
 								<ColorPalette // Element Tag for Gutenberg standard colour selector
 									onChange={onChangeHeaderBGColor} // onChange event callback
@@ -132,7 +129,7 @@ registerBlockType('gs-blocks/price-table', {
 							</fieldset>
 							<fieldset>
 								<legend className="blocks-base-control__label">
-									{__('Text color', 'price-table')}
+									{__('Text color', 'container-flex')}
 								</legend>
 								<ColorPalette // Element Tag for Gutenberg standard colour selector
 									onChange={onChangeHeaderTextColor} // onChange event callback
@@ -149,37 +146,24 @@ registerBlockType('gs-blocks/price-table', {
 								backgroundColor: attributes.header_bg_color,
 								color: attributes.header_text_color,
 								width: '100%',
-								minHeight: '100px',
+								maxWidth: '150px',
 							}}
 						/>
 					}
+					{/*<InnerBlocks />*/}
 				</div>
-
-				<InnerBlocks
-					allowedBlocks={ALLOWED_BLOCKS}
-					template={TEMPLATE}
-					//templateLock={'all'}
-					//renderAppender={false}
-					//templateInsertUpdatesSelection={true}
-					//__experimentalCaptureToolbars={true}
-				/>
 
 				{
 					<div
 						{...useBlockProps()}
-						className="footer"
+						className="items"
 						style={{
-							marginTop: '2rem',
-							backgroundColor: '#555',
-							width: '100%',
-							minHeight: '100px',
-							display: 'flex',
-							flexDirection: 'column',
-							alignItems: 'center',
-							justifyContent: 'center',
+							backgroundColor: 'green',
+							//width: '100%',
+							//height: '100%',
 						}}
 					>
-						<Button isPrimary>Click Me!</Button>
+						<p>{'Item 1'}</p>
 					</div>
 				}
 			</div>

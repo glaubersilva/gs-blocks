@@ -17,9 +17,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./editor.scss */ "./src/price/editor.scss");
-/* harmony import */ var _markup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./markup */ "./src/price/markup.js");
+/* harmony import */ var _price__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./price */ "./src/price/price.js");
 /* harmony import */ var _settings__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./settings */ "./src/price/settings.js");
 
+
+/**
+ * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
+ * All files containing `style` keyword are bundled together. The code used
+ * gets applied both to the front of your site and to the editor. All other files
+ * get applied to the editor only.
+ *
+ * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
+ */
 
 
 
@@ -35,7 +44,9 @@ function Edit(_ref) {
     isSelected,
     setAttributes
   };
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_markup__WEBPACK_IMPORTED_MODULE_3__["default"], props), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_settings__WEBPACK_IMPORTED_MODULE_4__["default"], props));
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_price__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    props: attributes
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_settings__WEBPACK_IMPORTED_MODULE_4__["default"], props));
 }
 
 /***/ }),
@@ -49,27 +60,14 @@ function Edit(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/price/style.scss");
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./editor.scss */ "./src/price/editor.scss");
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/price/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/price/save.js");
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./block.json */ "./src/price/block.json");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./edit */ "./src/price/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./save */ "./src/price/save.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./block.json */ "./src/price/block.json");
 /**
  * Registers a new block provided a unique name and an object defining its behavior.
  *
  * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
-
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * All files containing `style` keyword are bundled together. The code used
- * gets applied both to the front of your site and to the editor. All other files
- * get applied to the editor only.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
-
-
 
 /**
  * Internal dependencies
@@ -78,14 +76,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_5__.name, {
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_3__.name, {
   /**
    * Used to construct a preview for the block to be shown in the block inserter.
    */
   example: {
     attributes: {
       currency: '$',
-      original_price: '14,90',
+      original_price: '14.90',
       integer_part: '9',
       fractional_part: '90',
       period: 'month',
@@ -96,73 +94,78 @@ __webpack_require__.r(__webpack_exports__);
   /**
    * @see ./edit.js
    */
-  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
+  edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"],
 
   /**
    * @see ./save.js
    */
-  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"]
+  save: _save__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 
 /***/ }),
 
-/***/ "./src/price/markup.js":
-/*!*****************************!*\
-  !*** ./src/price/markup.js ***!
-  \*****************************/
+/***/ "./src/price/price.js":
+/*!****************************!*\
+  !*** ./src/price/price.js ***!
+  \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ markup)
+/* harmony export */   "default": () => (/* binding */ price)
 /* harmony export */ });
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/price/style.scss");
 
-function markup(_ref) {
+
+function price(_ref) {
   let {
-    attributes
+    props
   } = _ref;
+  const primaryColor = props.primary_color !== 'undefined' ? {
+    color: props.primary_color
+  } : {};
+  const secondaryColor = props.secondary_color !== 'undefined' ? {
+    color: props.secondary_color
+  } : {};
+  const highlightColor = props.highlight_color !== 'undefined' ? {
+    color: props.highlight_color
+  } : {};
+  props.currency = props.currency || '$';
+  props.original_price = props.original_price || '00.00';
+  props.integer_part = props.integer_part || '0';
+  props.fractional_part = props.fractional_part || '00';
+  props.period = props.period || '';
+  props.notice = props.notice || '';
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "gs-blocks-price",
-    style: {
-      backgroundColor: attributes.background_color
-    }
+    style: props.background_color !== 'undefined' ? {
+      backgroundColor: props.background_color
+    } : {}
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "gs-blocks-price-original-price gs-blocks-price-typo-excluded",
-    style: {
-      color: attributes.highlight_color
-    }
-  }, attributes.currency + attributes.original_price, ' '), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    style: highlightColor
+  }, props.currency + props.original_price, ' '), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     className: "gs-blocks-price-currency",
-    style: {
-      color: attributes.primary_color
-    }
-  }, attributes.currency, ' '), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    style: primaryColor
+  }, props.currency, ' '), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     className: "gs-blocks-price-integer-part",
-    style: {
-      color: attributes.primary_color
-    }
-  }, attributes.integer_part, ' '), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    style: primaryColor
+  }, props.integer_part, ' '), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "gs-blocks-price-after-integer-part",
-    style: {
-      color: attributes.primary_color
-    }
+    style: primaryColor
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     className: "gs-blocks-price-fractional-part"
-  }, attributes.fractional_part, ' '), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+  }, props.fractional_part, ' '), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     className: "gs-blocks-price-period gs-blocks-price-typo-excluded gs-blocks-price-period-position-beside"
-  }, attributes.period, ' '), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+  }, props.period, ' '), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     className: "gs-blocks-price-notice",
-    style: {
-      color: attributes.secondary_color
-    }
+    style: secondaryColor
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     className: "gs-blocks-price-asterisk",
-    style: {
-      color: attributes.highlight_color
-    }
-  }, '* '), attributes.notice), ' '));
+    style: highlightColor
+  }, props.notice ? '* ' : ''), props.notice), ' '));
 }
 
 /***/ }),
@@ -181,7 +184,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _markup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./markup */ "./src/price/markup.js");
+/* harmony import */ var _price__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./price */ "./src/price/price.js");
 
 
 
@@ -190,8 +193,8 @@ function save(_ref) {
     attributes
   } = _ref;
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save();
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_markup__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    attributes
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_price__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    props: attributes
   }));
 }
 
@@ -464,7 +467,7 @@ module.exports = window["wp"]["i18n"];
   \******************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"gs-blocks/price","version":"0.1.0","title":"Price","category":"gs-blocks","icon":"money-alt","description":"Stylized price block.","attributes":{"currency":{"type":"string","default":"$"},"original_price":{"type":"number","default":"14,90"},"integer_part":{"type":"number","default":"9"},"fractional_part":{"type":"number","default":"90"},"period":{"type":"string","default":"month"},"notice":{"type":"string","default":"billed annually"},"background_color":{"type":"string","default":"#f8f8f8"},"highlight_color":{"type":"string","default":"#ce362b"},"primary_color":{"type":"string","default":"#555"},"secondary_color":{"type":"string","default":"#000"}},"supports":{"html":false},"textdomain":"gs-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"gs-blocks/price","version":"0.1.0","title":"Price","category":"gs-blocks","icon":"money-alt","description":"Stylized price block.","attributes":{"currency":{"type":"string","default":"$"},"original_price":{"type":"number","default":"14.90"},"integer_part":{"type":"number","default":"9"},"fractional_part":{"type":"number","default":"90"},"period":{"type":"string","default":"month"},"notice":{"type":"string","default":"billed annually"},"background_color":{"type":"string","default":"#f8f8f8"},"highlight_color":{"type":"string","default":"#ce362b"},"primary_color":{"type":"string","default":"#555"},"secondary_color":{"type":"string","default":"#000"}},"supports":{"html":false},"textdomain":"gs-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 
