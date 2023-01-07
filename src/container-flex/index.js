@@ -61,7 +61,7 @@ registerBlockType('gs-blocks/container-flex', {
 		const ALLOWED_BLOCKS = ['gs-blocks/price', 'core/paragraph', 'core/list', 'core/list-item'];
 
 		const TEMPLATE = [
-			//['gs-blocks/price', { currency: '€' }],
+			['gs-blocks/price', { currency: '€' }],
 			//['core/list', {values: '<li>Feature 1</li><li>Feature 2</li><li>Feature 3</li><li>Feature 4</li>' },],
 			[
 				'core/group',
