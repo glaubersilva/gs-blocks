@@ -105,32 +105,7 @@ __webpack_require__.r(__webpack_exports__);
     const ALLOWED_BLOCKS = ['core/paragraph', 'core/columns', 'outermost/icon-block', 'uagb/icon-list', 'uagb/icon-list-child'];
     const TEMPLATE = [['gs-blocks/price', {
       currency: '€'
-    }], //['gs-blocks/container-flex', {}],
-    //['core/list', {values: '<li>Feature 1</li><li>Feature 2</li><li>Feature 3</li><li>Feature 4</li>' },],
-    ['core/group', {}, [['core/paragraph', {
-      content: 'Feature 1'
-    }], ['core/paragraph', {
-      content: 'Feature 2'
-    }], ['core/paragraph', {
-      content: 'Feature 3'
-    }], ['core/paragraph', {
-      content: 'Feature 4'
-    }]]]
-    /*[ 'core/columns', {},
-    	[
-    		[ 'core/column', {}, [
-    				[ 'core/heading', { level: 3, content: 'Sub Heading 1' } ],
-    				[ 'core/paragraph', { content: 'Lorem ipsum dolor sit amet id erat aliquet diam ullamcorper tempus massa eleifend vivamus.' } ],
-    			]
-    		],
-    		[ 'core/column', {}, [
-    				[ 'core/heading', { level: 3, content: 'Sub Heading 2' } ],
-    				[ 'core/paragraph', { content: 'Morbi augue cursus quam pulvinar eget volutpat suspendisse dictumst mattis id.' } ],
-    			]
-    		],
-    	]
-    ],*/
-    ];
+    }], ['gs-blocks/items', {}]];
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.useBlockProps)(), {
       className: "grid"
     }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
