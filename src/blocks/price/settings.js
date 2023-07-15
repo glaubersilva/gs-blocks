@@ -1,5 +1,5 @@
-import { ColorPalette, InspectorControls } from '@wordpress/block-editor';
-import { TextControl } from '@wordpress/components';
+import { InspectorControls } from '@wordpress/block-editor';
+import {PanelBody, PanelRow, TextControl, ColorPalette} from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 export default function Settings({ attributes, setAttributes }) {
@@ -52,123 +52,109 @@ export default function Settings({ attributes, setAttributes }) {
 	];
 
 	return (
-		<div className="gs-blocks-price-settings">
-			<InspectorControls key="settingp">
-				<div id="controlsp">
-					<fieldset>
-						<legend className="blocks-base-control__label">
-							{__('Currency', 'gs-blocks')}
-						</legend>
-						<TextControl
-							value={attributes.currency}
-							onChange={onChangePriceCurrency}
-							style={{
-								maxWidth: '100px',
-							}}
-						/>
-					</fieldset>
-					<fieldset>
-						<legend className="blocks-base-control__label">
-							{__('Original Price', 'gs-blocks')}
-						</legend>
-						<TextControl
-							value={attributes.original_price}
-							onChange={onChangeOriginalPrice}
-							style={{
-								maxWidth: '100px',
-							}}
-						/>
-					</fieldset>
-					<fieldset>
-						<legend className="blocks-base-control__label">
-							{__('Integer Part', 'gs-blocks')}
-						</legend>
-						<TextControl
-							value={attributes.integer_part}
-							onChange={onChangeIntegerPart}
-							style={{
-								maxWidth: '100px',
-							}}
-						/>
-					</fieldset>
-					<fieldset>
-						<legend className="blocks-base-control__label">
-							{__('Fractional Part', 'gs-blocks')}
-						</legend>
-						<TextControl
-							value={attributes.fractional_part}
-							onChange={onChangeFractionalPart}
-							style={{
-								maxWidth: '100px',
-							}}
-						/>
-					</fieldset>
-					<fieldset>
-						<legend className="blocks-base-control__label">
-							{__('Period', 'gs-blocks')}
-						</legend>
-						<TextControl
-							value={attributes.period}
-							onChange={onChangePeriod}
-							style={{
-								maxWidth: '100px',
-							}}
-						/>
-					</fieldset>
-					<fieldset>
-						<legend className="blocks-base-control__label">
-							{__('Notice', 'gs-blocks')}
-						</legend>
-						<TextControl
-							value={attributes.notice}
-							onChange={onChangeNotice}
-							style={{
-								maxWidth: '200px',
-							}}
-						/>
-					</fieldset>
-					<fieldset>
-						<legend className="blocks-base-control__label">
-							{__('Background Color:', 'gs-blocks')}
-						</legend>
-						<ColorPalette
-							colors={colors}
-							value={attributes.background_color}
-							onChange={onChangeBackgroundColor}
-						/>
-					</fieldset>
-					<fieldset>
-						<legend className="blocks-base-control__label">
-							{__('Highlight Color:', 'gs-blocks')}
-						</legend>
-						<ColorPalette
-							colors={colors}
-							value={attributes.highlight_color}
-							onChange={onChangeHighlightColor}
-						/>
-					</fieldset>
-					<fieldset>
-						<legend className="blocks-base-control__label">
-							{__('Primary Color', 'gs-blocks')}
-						</legend>
-						<ColorPalette
-							colors={colors}
-							value={attributes.primary_color}
-							onChange={onChangePrimaryColor}
-						/>
-					</fieldset>
-					<fieldset>
-						<legend className="blocks-base-control__label">
-							{__('Secondary Color', 'gs-blocks')}
-						</legend>
-						<ColorPalette
-							colors={colors}
-							value={attributes.secondary_color}
-							onChange={onChangeSecondaryColor}
-						/>
-					</fieldset>
-				</div>
-			</InspectorControls>
-		</div>
+		<InspectorControls>
+			<PanelBody title={__('Currency', 'gs-blocks')} initialOpen={true}>
+				<PanelRow>
+					<TextControl
+						value={attributes.currency}
+						onChange={onChangePriceCurrency}
+						style={{
+							maxWidth: '100px',
+						}}
+					/>
+				</PanelRow>
+			</PanelBody>
+			<PanelBody title={__('Original Price', 'gs-blocks')} initialOpen={true}>
+				<PanelRow>
+					<TextControl
+						value={attributes.original_price}
+						onChange={onChangeOriginalPrice}
+						style={{
+							maxWidth: '100px',
+						}}
+					/>
+				</PanelRow>
+			</PanelBody>
+			<PanelBody title={__('Price', 'gs-blocks')} initialOpen={true}>
+				<PanelRow>
+					<TextControl
+						label={__('Integer Part', 'gs-blocks')}
+						value={attributes.integer_part}
+						onChange={onChangeIntegerPart}
+						style={{
+							maxWidth: '100px',
+						}}
+					/>
+				</PanelRow>
+				<PanelRow>
+					<TextControl
+						label={__('Fractional Part', 'gs-blocks')}
+						value={attributes.fractional_part}
+						onChange={onChangeFractionalPart}
+						style={{
+							maxWidth: '100px',
+						}}
+					/>
+				</PanelRow>
+			</PanelBody>
+			<PanelBody title={__('Period', 'gs-blocks')} initialOpen={true}>
+				<PanelRow>
+					<TextControl
+						value={attributes.period}
+						onChange={onChangePeriod}
+						style={{
+							maxWidth: '100px',
+						}}
+					/>
+				</PanelRow>
+			</PanelBody>
+			<PanelBody title={__('Notice', 'gs-blocks')} initialOpen={true}>
+				<PanelRow>
+					<TextControl
+						value={attributes.notice}
+						onChange={onChangeNotice}
+						style={{
+							maxWidth: '200px',
+						}}
+					/>
+				</PanelRow>
+			</PanelBody>
+			<PanelBody title={__('Background Color', 'gs-blocks')} initialOpen={false}>
+				<PanelRow>
+					<ColorPalette
+						colors={colors}
+						value={attributes.background_color}
+						onChange={onChangeBackgroundColor}
+					/>
+				</PanelRow>
+			</PanelBody>
+			<PanelBody title={__('Highlight Color', 'gs-blocks')} initialOpen={false}>
+				<PanelRow>
+					<ColorPalette
+						colors={colors}
+						value={attributes.highlight_color}
+						onChange={onChangeHighlightColor}
+					/>
+				</PanelRow>
+			</PanelBody>
+			<PanelBody title={__('Primary Color', 'gs-blocks')} initialOpen={false}>
+				<PanelRow>
+					<ColorPalette
+						colors={colors}
+						value={attributes.primary_color}
+						onChange={onChangePrimaryColor}
+					/>
+				</PanelRow>
+			</PanelBody>
+			<PanelBody title={__('Secondary Color', 'gs-blocks')} initialOpen={false}>
+				<PanelRow>
+					<ColorPalette
+						colors={colors}
+						value={attributes.secondary_color}
+						onChange={onChangeSecondaryColor}
+					/>
+				</PanelRow>
+			</PanelBody>
+		</InspectorControls>
 	);
 }
