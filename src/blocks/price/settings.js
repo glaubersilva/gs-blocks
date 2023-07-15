@@ -3,8 +3,6 @@ import {PanelBody, PanelRow, TextControl, ColorPalette} from '@wordpress/compone
 import { __ } from '@wordpress/i18n';
 
 export default function Settings({ attributes, setAttributes }) {
-
-	console.log('attributes: ', attributes);
 	const onChangePriceCurrency = (val) => {
 		setAttributes({ currency: val });
 	};

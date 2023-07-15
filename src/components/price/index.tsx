@@ -1,6 +1,6 @@
 import './style.scss';
 
-type PriceProps = {
+type priceProps = {
     props: {
         currency?: string;
         originalPrice?: number;
@@ -28,7 +28,7 @@ export default function Price({
                                       secondaryColor,
                                       highlightColor
                                   }
-                              }: PriceProps) {
+                              }: priceProps) {
 
     return (
         <div
