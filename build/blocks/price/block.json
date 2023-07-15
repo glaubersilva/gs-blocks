@@ -12,15 +12,15 @@
       "type": "string",
       "default": "$"
     },
-    "original_price": {
+    "originalPrice": {
       "type": "number",
       "default": "14.90"
     },
-    "integer_part": {
+    "integerPart": {
       "type": "number",
       "default": "9"
     },
-    "fractional_part": {
+    "fractionalPart": {
       "type": "number",
       "default": "90"
     },
@@ -32,19 +32,19 @@
       "type": "string",
       "default": "billed annually"
     },
-    "background_color": {
+    "backgroundColor": {
       "type": "string",
       "default": "#f8f8f8"
     },
-    "highlight_color": {
+    "highlightColor": {
       "type": "string",
       "default": "#ce362b"
     },
-    "primary_color": {
+    "primaryColor": {
       "type": "string",
       "default": "#555"
     },
-    "secondary_color": {
+    "secondaryColor": {
       "type": "string",
       "default": "#000"
     }

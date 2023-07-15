@@ -3,20 +3,22 @@ import {PanelBody, PanelRow, TextControl, ColorPalette} from '@wordpress/compone
 import { __ } from '@wordpress/i18n';
 
 export default function Settings({ attributes, setAttributes }) {
+
+	console.log('attributes: ', attributes);
 	const onChangePriceCurrency = (val) => {
 		setAttributes({ currency: val });
 	};
 
 	const onChangeOriginalPrice = (val) => {
-		setAttributes({ original_price: val });
+		setAttributes({ originalPrice: val });
 	};
 
 	const onChangeIntegerPart = (val) => {
-		setAttributes({ integer_part: val });
+		setAttributes({ integerPart: val });
 	};
 
 	const onChangeFractionalPart = (val) => {
-		setAttributes({ fractional_part: val });
+		setAttributes({ fractionalPart: val });
 	};
 
 	const onChangePeriod = (val) => {
@@ -28,19 +30,19 @@ export default function Settings({ attributes, setAttributes }) {
 	};
 
 	const onChangeBackgroundColor = (hexColor) => {
-		setAttributes({ background_color: hexColor });
+		setAttributes({ backgroundColor: hexColor });
 	};
 
 	const onChangeHighlightColor = (hexColor) => {
-		setAttributes({ highlight_color: hexColor });
+		setAttributes({ highlightColor: hexColor });
 	};
 
 	const onChangePrimaryColor = (hexColor) => {
-		setAttributes({ primary_color: hexColor });
+		setAttributes({ primaryColor: hexColor });
 	};
 
 	const onChangeSecondaryColor = (hexColor) => {
-		setAttributes({ secondary_color: hexColor });
+		setAttributes({ secondaryColor: hexColor });
 	};
 
 	const colors = [
@@ -67,7 +69,7 @@ export default function Settings({ attributes, setAttributes }) {
 			<PanelBody title={__('Original Price', 'gs-blocks')} initialOpen={true}>
 				<PanelRow>
 					<TextControl
-						value={attributes.original_price}
+						value={attributes.originalPrice}
 						onChange={onChangeOriginalPrice}
 						style={{
 							maxWidth: '100px',
@@ -79,7 +81,7 @@ export default function Settings({ attributes, setAttributes }) {
 				<PanelRow>
 					<TextControl
 						label={__('Integer Part', 'gs-blocks')}
-						value={attributes.integer_part}
+						value={attributes.integerPart}
 						onChange={onChangeIntegerPart}
 						style={{
 							maxWidth: '100px',
@@ -89,7 +91,7 @@ export default function Settings({ attributes, setAttributes }) {
 				<PanelRow>
 					<TextControl
 						label={__('Fractional Part', 'gs-blocks')}
-						value={attributes.fractional_part}
+						value={attributes.fractionalPart}
 						onChange={onChangeFractionalPart}
 						style={{
 							maxWidth: '100px',
@@ -123,7 +125,7 @@ export default function Settings({ attributes, setAttributes }) {
 				<PanelRow>
 					<ColorPalette
 						colors={colors}
-						value={attributes.background_color}
+						value={attributes.backgroundColor}
 						onChange={onChangeBackgroundColor}
 					/>
 				</PanelRow>
@@ -132,7 +134,7 @@ export default function Settings({ attributes, setAttributes }) {
 				<PanelRow>
 					<ColorPalette
 						colors={colors}
-						value={attributes.highlight_color}
+						value={attributes.highlightColor}
 						onChange={onChangeHighlightColor}
 					/>
 				</PanelRow>
@@ -141,7 +143,7 @@ export default function Settings({ attributes, setAttributes }) {
 				<PanelRow>
 					<ColorPalette
 						colors={colors}
-						value={attributes.primary_color}
+						value={attributes.primaryColor}
 						onChange={onChangePrimaryColor}
 					/>
 				</PanelRow>
@@ -150,7 +152,7 @@ export default function Settings({ attributes, setAttributes }) {
 				<PanelRow>
 					<ColorPalette
 						colors={colors}
-						value={attributes.secondary_color}
+						value={attributes.secondaryColor}
 						onChange={onChangeSecondaryColor}
 					/>
 				</PanelRow>
