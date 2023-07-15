@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "gs-blocks/items",
+  "version": "0.1.0",
+  "title": "Items",
+  "category": "gs-blocks",
+  "icon": "editor-ul",
+  "description": "Add any block as repeatable item.",
+  "attributes": {
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "content_before": {
+      "type": "array",
+      "selector": "p",
+      "default": "Content before items..."
+    },
+    "content_after": {
+      "type": "array",
+      "selector": "p",
+      "default": "Content after items..."
+    },
+    "allowed_blocks": {
+      "type": "string",
+      "default": ""
+    },
+    "template": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "gs-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
