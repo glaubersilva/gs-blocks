@@ -5,7 +5,7 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.grid {
+.gs-blocks-grid {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto auto;
@@ -14,19 +14,20 @@
 }
 
 /* Grid Item */
-.item {
+.gs-blocks-item {
 	/*margin: 5px;*/
+	margin: 0 auto;
 	background-color: tomato;
 	text-align: center;
 	font-size: 1.5em;
 }
 
-.header {
+.gs-blocks-header {
 	width: 100%;
 	min-height: 100px;
 }
 
-.footer {
+.gs-blocks-footer {
 	/*margin-top: 2rem;*/
 	background-color: #555;
 	width: 100%;

@@ -147,6 +147,23 @@ registerBlockType('gs-blocks/items', {
 					tagName="p"
 					value={props.attributes.content_before}
 				/>
+
+				<div
+					style={{
+						margin: '0 auto',
+						//backgroundColor: 'blue',
+						padding: '20px',
+						textAlign: props.attributes.alignment,
+					}}
+				>
+				<InnerBlocks.Content />
+				</div>
+
+				<RichText.Content
+					className={`gutenberg-examples-align-${props.attributes.alignment}`}
+					tagName="p"
+					value={props.attributes.content_after}
+				/>
 			</div>
 		);
 	},

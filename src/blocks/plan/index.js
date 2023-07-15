@@ -83,12 +83,13 @@ registerBlockType('gs-blocks/plan', {
 
 		const TEMPLATE = [
 			['gs-blocks/price', { currency: '€' }],
+			['core/paragraph', {placeholder: 'Item 1'}],
 			['gs-blocks/items', {}],
 		];
 
 		return (
-			<div {...useBlockProps()} className="grid">
-				<div className="header">
+			<div {...useBlockProps()} className="gs-blocks-grid">
+				<div className="gs-blocks-header">
 					<TextControl
 						value={attributes.header}
 						onChange={(val) => setAttributes({ header: val })}
@@ -102,8 +103,9 @@ registerBlockType('gs-blocks/plan', {
 					/>
 				</div>
 				<div
+					className="gs-blocks-item"
 					style={{
-						margin: '0 auto',
+						//margin: '0 auto',
 						//textAlign: 'center',
 						//lineHeight: '20px',
 						//marginBlockStart: '0.5rem',
@@ -119,7 +121,7 @@ registerBlockType('gs-blocks/plan', {
 						//__experimentalCaptureToolbars={true}
 					/>
 				</div>
-				<div className="footer">
+				<div className="gs-blocks-footer">
 					<Button isPrimary>Click Me!</Button>
 				</div>
 			</div>
@@ -129,12 +131,28 @@ registerBlockType('gs-blocks/plan', {
 		return (
 			<div
 				{...useBlockProps.save()}
-				style={{
-					backgroundColor: attributes.header_bg_color,
-					color: attributes.header_text_color,
-				}}
+				className="gs-blocks-grid"
 			>
-				{attributes.header}
+				<div
+					className="gs-blocks-header"
+					style={{
+						backgroundColor: attributes.header_bg_color,
+						color: attributes.header_text_color,
+					}}
+				>
+					{attributes.header}
+				</div>
+
+				<div
+					className="gs-blocks-item"
+				>
+					<InnerBlocks.Content />
+				</div>
+
+				<div className="gs-blocks-footer">
+					<button>Click Me!</button>
+				</div>
+
 			</div>
 		);
 	},
