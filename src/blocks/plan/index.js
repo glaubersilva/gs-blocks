@@ -89,6 +89,9 @@ registerBlockType('gs-blocks/plan', {
 
 		return (
 			<div {...useBlockProps()} className="gs-blocks-grid">
+				<div className="gs-blocks-ribbon">
+					20% OFF! (best choice)
+				</div>
 				<div className="gs-blocks-header">
 					<TextControl
 						value={attributes.header}
